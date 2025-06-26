@@ -1,0 +1,6 @@
+Final Steps to Get Pastr Running:
+Create Placeholder Icons: Ensure you have icon16.png, icon48.png, icon128.png in your assets/icons/ directory.
+
+Download Showdown.js: Make sure showdown.min.js is in assets/showdown/.
+
+Adjust CSS for Theming: Remember to implement the CSS variables (--primary-color, --text-color, --background-color, --card-background, --border-color) in both popup.css and options.css to fully support the theming functionality controlled by options.js.
