@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastr - Your Snippet Manager</title>
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Pastr <span class="emoji">📝</span></h1>
+            <div class="header-actions">
+                <button id="addSnippetBtn" class="action-btn add-btn" aria-label="Add New Snippet">
+                    <span class="emoji">➕</span> Add Snippet
+                </button>
+                <button id="optionsBtn" class="action-btn settings-btn" aria-label="Open Settings">
+                    <span class="emoji">⚙️</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search snippets or filter by tag:work, fav:true..." aria-label="Search snippets">
+        </div>
+
+        <div class="filters">
+            <button id="toggleFavorites" class="filter-btn" aria-pressed="false" aria-label="Toggle Favorite Snippets">
+                <span class="emoji">⭐️</span> Favorites
+            </button>
+        </div>
+
+        <main class="snippet-list" id="snippetList">
+            <p class="no-snippets-message" id="noSnippetsMessage">No snippets yet! Click "Add Snippet" to get started.</p>
+        </main>
+    </div>
+
+    <script src="assets/showdown/showdown.min.js"></script>
+    <script type="module" src="popup.js"></script>
+</body>
+</html>
