@@ -1,0 +1,153 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    width: 380px; /* Standard popup width */
+    height: 550px; /* Standard popup height, can be adjusted */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Light background */
+    color: #333;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.title .emoji {
+    margin-left: 8px;
+    font-size: 0.9em;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.action-btn:hover {
+    background-color: #0056b3;
+}
+
+.action-btn .emoji {
+    font-size: 1.1em;
+}
+
+.settings-btn {
+    padding: 8px; /* Square button for icon */
+}
+
+.search-bar {
+    margin-bottom: 15px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.filter-btn {
+    background-color: #e2e6ea;
+    color: #555;
+    border: 1px solid #d6d9dc;
+    padding: 6px 10px;
+    border-radius: 20px; /* Pill shape */
+    cursor: pointer;
+    font-size: 0.85em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: #d1d5db;
+}
+
+.filter-btn[aria-pressed="true"] {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.snippet-list {
+    flex-grow: 1; /* Allows the list to take up available space */
+    overflow-y: auto; /* Enable scrolling within the snippet list */
+    padding-right: 5px; /* Space for scrollbar */
+}
+
+.no-snippets-message {
+    text-align: center;
+    color: #777;
+    margin-top: 50px;
+    font-style: italic;
+}
+
+/* Scrollbar styling (for WebKit browsers) */
+.snippet-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.snippet-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.snippet-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.snippet-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
