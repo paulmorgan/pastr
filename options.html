@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastr Options</title>
+    <link rel="stylesheet" href="css/options.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Pastr Options <span class="emoji">⚙️</span></h1>
+        </header>
+
+        <main class="options-sections">
+            <section class="option-section" id="themingSection">
+                <h2>🎨 Theming</h2>
+                <div class="option-group">
+                    <label for="themeSelect">Theme Mode:</label>
+                    <select id="themeSelect">
+                        <option value="light">Light Mode</option>
+                        <option value="dark">Dark Mode</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <label for="accentColorPicker">Accent Color:</label>
+                    <input type="color" id="accentColorPicker" value="#007bff">
+                </div>
+                <div class="option-group">
+                    <label for="backgroundImageInput">Background Image URL (Optional):</label>
+                    <input type="text" id="backgroundImageInput" placeholder="e.g., https://example.com/bg.jpg">
+                    <button id="clearBackgroundImageBtn" class="action-btn small-btn">Clear Image</button>
+                </div>
+            </section>
+
+            <section class="option-section" id="syncSection">
+                <h2>☁️ Sync & Backup</h2>
+                <div class="option-group">
+                    <label>Google Drive Sync:</label>
+                    <button id="authorizeGoogleDriveBtn" class="action-btn">Authorize Google Drive</button>
+                    <button id="deauthorizeGoogleDriveBtn" class="action-btn red-btn hidden">Deauthorize</button>
+                    <p id="authStatus" class="status-message"></p>
+                </div>
+                <div class="option-group">
+                    <label for="syncIntervalSelect">Automatic Sync Interval:</label>
+                    <select id="syncIntervalSelect">
+                        <option value="0">Disabled</option>
+                        <option value="5">Every 5 Minutes</option>
+                        <option value="15">Every 15 Minutes</option>
+                        <option value="30">Every 30 Minutes</option>
+                    </select>
+                    <button id="manualSyncBtn" class="action-btn">Manual Sync Now</button>
+                    <p id="lastSyncStatus" class="status-message"></p>
+                </div>
+            </section>
+
+            <section class="option-section" id="dataSection">
+                <h2>📁 Data Management</h2>
+                <div class="option-group">
+                    <label>Import/Export Snippets:</label>
+                    <button id="exportDataBtn" class="action-btn">Export Data (JSON)</button>
+                    <input type="file" id="importFileInput" accept=".json" class="hidden">
+                    <button id="importDataBtn" class="action-btn">Import Data (JSON)</button>
+                    <p class="status-message" id="importStatus"></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="options.js"></script>
+</body>
+</html>
